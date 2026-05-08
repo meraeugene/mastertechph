@@ -494,60 +494,60 @@
         </div>
       </section>
 
-      <section class="section-pad blue-poster texture">
+      <section class="section-pad blue-poster texture overflow-hidden">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div
-            class="glass-card-light overflow-hidden rounded-2xl text-white"
-            data-aos="zoom-in"
+            class="payment-panel overflow-hidden rounded-[28px] text-white shadow-poster"
+            data-aos="fade-up"
           >
-            <div class="grid lg:grid-cols-[0.9fr_1.1fr]">
-              <div class="p-6 sm:p-8 lg:p-10">
+            <div class="grid lg:grid-cols-[0.86fr_1.14fr]">
+              <div class="payment-copy p-6 sm:p-8 lg:p-10 xl:p-12">
                 <p
                   class="text-sm font-black uppercase tracking-wide text-master-yellow"
                 >
                   Payment Options
                 </p>
-                <h2 class="mt-2 text-3xl font-black sm:text-4xl">
-                  Flexible ways to pay.
+                <h2 class="mt-3 text-4xl font-black leading-tight tracking-normal sm:text-5xl">
+                  Pay your way, without the guesswork.
                 </h2>
                 <p
-                  class="mt-4 max-w-md text-sm font-semibold leading-7 text-white/82"
+                  class="mt-5 max-w-lg text-base font-semibold leading-8 text-white/80"
                 >
-                  Choose from installment, wallet, bank, and card payment
-                  options at participating branches.
+                  Choose from installments, e-wallets, bank payments, and card
+                  plans at participating MasterTech branches.
                 </p>
-                <div class="mt-8 grid max-w-sm grid-cols-3 gap-3 text-center">
-                  <span class="rounded-xl bg-white/15 p-4 backdrop-blur"
-                    ><i
-                      data-lucide="wallet-cards"
-                      class="mx-auto h-6 w-6 text-master-yellow"
-                    ></i
-                  ></span>
-                  <span class="rounded-xl bg-white/15 p-4 backdrop-blur"
-                    ><i
-                      data-lucide="credit-card"
-                      class="mx-auto h-6 w-6 text-master-yellow"
-                    ></i
-                  ></span>
-                  <span class="rounded-xl bg-white/15 p-4 backdrop-blur"
-                    ><i
-                      data-lucide="landmark"
-                      class="mx-auto h-6 w-6 text-master-yellow"
-                    ></i
-                  ></span>
+                <div class="mt-8 grid gap-3 sm:grid-cols-3">
+                  <div class="payment-feature">
+                    <i data-lucide="wallet-cards" class="h-5 w-5"></i>
+                    <span>Wallets</span>
+                  </div>
+                  <div class="payment-feature">
+                    <i data-lucide="calendar-check" class="h-5 w-5"></i>
+                    <span>Installments</span>
+                  </div>
+                  <div class="payment-feature">
+                    <i data-lucide="landmark" class="h-5 w-5"></i>
+                    <span>Bank & Cards</span>
+                  </div>
                 </div>
+                <a
+                  href="#branches"
+                  class="cta-button mt-8 inline-flex items-center justify-center gap-2 rounded-xl bg-master-yellow px-5 py-3 text-sm font-black uppercase text-master-ink shadow-poster"
+                >
+                  Ask a Branch <i data-lucide="arrow-right" class="h-4 w-4"></i>
+                </a>
               </div>
               <div
-                class="grid gap-3 p-6 backdrop-blur sm:grid-cols-2 sm:p-8 lg:p-10"
+                class="payment-options grid content-center gap-3 p-6 sm:grid-cols-2 sm:p-8 lg:p-10 xl:p-12"
               >
-                <pay-option text="Home Credit"></pay-option>
-                <pay-option text="BillEase"></pay-option>
-                <pay-option text="Salmon"></pay-option>
-                <pay-option text="Skyro"></pay-option>
-                <pay-option text="GCash"></pay-option>
-                <pay-option text="Maya"></pay-option>
-                <pay-option text="Bank Payments"></pay-option>
-                <pay-option text="Credit Card Installments"></pay-option>
+                <pay-option icon="badge-percent" text="Home Credit"></pay-option>
+                <pay-option icon="receipt-text" text="BillEase"></pay-option>
+                <pay-option icon="badge-percent" text="Salmon"></pay-option>
+                <pay-option icon="badge-percent" text="Skyro"></pay-option>
+                <pay-option icon="smartphone" text="GCash"></pay-option>
+                <pay-option icon="smartphone" text="Maya"></pay-option>
+                <pay-option icon="landmark" text="Bank Payments"></pay-option>
+                <pay-option icon="credit-card" text="Credit Card Installments"></pay-option>
               </div>
             </div>
           </div>

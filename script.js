@@ -10,9 +10,15 @@
         connectedCallback() {
           const siblings = Array.from(this.parentElement?.querySelectorAll("pay-option") || []);
           const shineIndex = Math.max(0, siblings.indexOf(this));
-          this.innerHTML = `<div class="payment-shine glass-card-light glass-hover hover-lift group flex items-center justify-between rounded-xl px-4 py-4 text-sm font-black text-white" style="--shine-index: ${shineIndex}">
-          <span>${this.getAttribute("text")}</span>
-          <i data-lucide="arrow-up-right" class="h-4 w-4 text-master-yellow transition group-hover:text-white"></i>
+          const icon = this.getAttribute("icon") || "credit-card";
+          this.innerHTML = `<div class="payment-shine glass-card-light glass-hover hover-lift group flex min-h-[4.75rem] items-center justify-between gap-4 rounded-2xl px-4 py-4 text-sm font-black text-white" style="--shine-index: ${shineIndex}">
+          <span class="flex min-w-0 items-center gap-3">
+            <span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-master-yellow text-master-ink">
+              <i data-lucide="${icon}" class="h-5 w-5"></i>
+            </span>
+            <span class="leading-tight">${this.getAttribute("text")}</span>
+          </span>
+          <i data-lucide="arrow-up-right" class="h-4 w-4 shrink-0 text-master-yellow transition group-hover:text-white"></i>
         </div>`;
         }
       }

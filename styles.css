@@ -79,6 +79,54 @@
       .poster-copy {
         text-shadow: 0 2px 10px rgba(0, 46, 134, 0.18);
       }
+      .payment-panel {
+        border: 1px solid rgba(120, 188, 255, 0.42);
+        background:
+          linear-gradient(135deg, rgba(0, 109, 255, 0.96), rgba(31, 132, 235, 0.94)),
+          rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(22px);
+      }
+      .payment-copy {
+        position: relative;
+        background: rgba(0, 109, 255, 0.58);
+      }
+      .payment-copy > * {
+        position: relative;
+        z-index: 1;
+      }
+      .payment-feature {
+        display: flex;
+        min-height: 5.25rem;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 0.85rem;
+        border: 1px solid rgba(160, 210, 255, 0.34);
+        border-radius: 1rem;
+        background: rgba(255, 255, 255, 0.14);
+        padding: 1rem;
+        color: #ffd23f;
+        backdrop-filter: blur(12px);
+      }
+      .payment-feature span {
+        color: #fff;
+        font-size: 0.84rem;
+        font-weight: 900;
+        line-height: 1.15;
+      }
+      .payment-options {
+        background: rgba(43, 132, 224, 0.42);
+      }
+      .payment-options .glass-card-light {
+        border-color: rgba(166, 213, 255, 0.36);
+        background: rgba(122, 184, 244, 0.34);
+      }
+      @media (max-width: 1023px) {
+        .payment-panel {
+          background:
+            linear-gradient(135deg, rgba(0, 109, 255, 0.96), rgba(31, 132, 235, 0.94)),
+            rgba(255, 255, 255, 0.12);
+        }
+      }
       .paper-corner::before {
         content: "";
         position: absolute;
