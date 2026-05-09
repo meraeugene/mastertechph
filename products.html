@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products | MasterTech Computer Trading - CDO</title>
+    <meta
+      name="description"
+      content="Browse MasterTech Computer Trading - CDO desktop packages, laptops, gaming chairs, and current deals."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "ui-sans-serif", "system-ui"],
+            },
+            colors: {
+              master: {
+                blue: "#006DFF",
+                deep: "#004EC2",
+                light: "#2DA4FF",
+                sky: "#D8EEFF",
+                yellow: "#FFD23F",
+                ink: "#07162F",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header
+      class="fixed inset-x-0 top-0 z-50 border-b border-white/20 bg-master-blue/90 text-white backdrop-blur-xl"
+    >
+      <nav
+        class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-8"
+      >
+        <a href="/#home" class="flex items-center gap-3">
+          <img
+            src="assets/logo.jpg"
+            alt="MasterTech logo"
+            class="h-11 w-11 rounded-xl bg-white object-contain p-1 shadow-md"
+          />
+          <span class="leading-tight">
+            <span class="block text-sm font-black uppercase tracking-wide"
+              >MasterTech</span
+            >
+            <span class="block text-xs font-bold text-white/80"
+              >Computer Trading
+            </span>
+          </span>
+        </a>
+        <div class="hidden items-center gap-7 text-sm font-bold lg:flex">
+          <a href="/products.html" class="nav-link">Products</a>
+          <a href="/#branches" class="nav-link">Branches</a>
+          <a href="/#hours" class="nav-link">Hours</a>
+          <a href="/#reviews" class="nav-link">Reviews</a>
+        </div>
+        <a
+          href="https://www.facebook.com/MTCT.CDO"
+          class="cta-button hidden items-center gap-2 rounded-full bg-master-yellow px-5 py-2.5 text-sm font-black text-master-ink shadow-md lg:inline-flex"
+        >
+          <i data-lucide="message-circle" class="h-4 w-4"></i>
+          Message Us
+        </a>
+        <button
+          class="burger-button lg:hidden"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="mobileNav"
+          data-nav-toggle
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+      <div class="mobile-nav lg:hidden" id="mobileNav" data-mobile-nav>
+        <div class="grid gap-0 pb-4 pt-2">
+          <a href="/products.html" class="nav-link mobile-nav-link">Products</a>
+          <a href="/#branches" class="nav-link mobile-nav-link">Branches</a>
+          <a href="/#hours" class="nav-link mobile-nav-link">Hours</a>
+          <a href="/#reviews" class="nav-link mobile-nav-link">Reviews</a>
+          <a
+            href="https://www.facebook.com/MTCT.CDO"
+            class="cta-button mt-2 inline-flex items-center justify-center gap-2 rounded-xl bg-master-yellow px-5 py-3 text-sm font-black text-master-ink shadow-md"
+          >
+            <i data-lucide="message-circle" class="h-4 w-4"></i>
+            Message Us
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="products-shell">
+      <section
+        class="blue-poster texture px-4 pb-10 pt-24 sm:px-6 sm:pb-12 sm:pt-28 lg:px-8"
+      >
+        <div class="products-toolbar">
+          <label class="products-search">
+            <i data-lucide="search" class="h-5 w-5"></i>
+            <input
+              type="search"
+              placeholder="Search by product, category, or deal..."
+              data-products-search
+            />
+          </label>
+          <div class="product-filters" aria-label="Product filters">
+            <button
+              class="product-filter is-active"
+              type="button"
+              data-product-filter="all"
+            >
+              All
+            </button>
+            <button
+              class="product-filter"
+              type="button"
+              data-product-filter="pc"
+            >
+              PC
+            </button>
+            <button
+              class="product-filter"
+              type="button"
+              data-product-filter="gaming-chair"
+            >
+              Gaming Chair
+            </button>
+            <button
+              class="product-filter"
+              type="button"
+              data-product-filter="deals"
+            >
+              Deals
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8" data-products-section>
+        <p
+          class="mb-5 text-sm font-black uppercase tracking-wide text-master-blue"
+          data-products-count
+        >
+          16 products found
+        </p>
+        <div class="products-grid" data-products-grid></div>
+        <div class="products-pagination mt-9" data-products-pagination></div>
+      </section>
+    </main>
+
+    <footer class="glass-footer texture text-white">
+      <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+        <div class="grid gap-8 lg:grid-cols-[1.15fr_1fr_1fr]">
+          <div>
+            <div class="flex items-center gap-3">
+              <img
+                src="assets/logo.jpg"
+                alt="MasterTech logo"
+                class="h-12 w-12 rounded-xl bg-white object-contain p-1"
+              />
+              <div>
+                <p class="font-black uppercase">MasterTech</p>
+                <p class="text-sm font-bold text-white/70">
+                  Computer Trading - CDO
+                </p>
+              </div>
+            </div>
+            <div class="mt-5 flex flex-wrap gap-3">
+              <a
+                aria-label="Facebook"
+                class="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-black text-master-blue transition hover:-translate-y-1 hover:bg-master-yellow hover:text-master-ink"
+                href="https://www.facebook.com/MTCT.CDO"
+                target="_blank"
+                rel="noopener"
+              >
+                <i data-lucide="messages-square" class="h-4 w-4"></i> Facebook
+              </a>
+              <a
+                aria-label="TikTok"
+                class="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-black text-master-blue transition hover:-translate-y-1 hover:bg-master-yellow hover:text-master-ink"
+                href="https://tiktok.com/@mastertechcomputer"
+                target="_blank"
+                rel="noopener"
+              >
+                <i data-lucide="music-2" class="h-4 w-4"></i> TikTok
+              </a>
+              <a
+                aria-label="YouTube"
+                class="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-black text-master-blue transition hover:-translate-y-1 hover:bg-master-yellow hover:text-master-ink"
+                href="https://youtube.com/@mastertechcomputer"
+                target="_blank"
+                rel="noopener"
+              >
+                <i data-lucide="circle-play" class="h-4 w-4"></i> YouTube
+              </a>
+            </div>
+            <p class="mt-5 text-sm font-semibold leading-7 text-white/70">
+              Affordable Tech. Quality Service. Your trusted source for
+              budget-friendly computers, accessories, and expert tech support.
+            </p>
+          </div>
+          <div>
+            <h3 class="font-black text-master-yellow">Contact</h3>
+            <div
+              class="mt-4 grid gap-3 text-sm font-semibold leading-6 text-white/72"
+            >
+              <p class="flex gap-3">
+                <i
+                  data-lucide="store"
+                  class="mt-1 h-4 w-4 shrink-0 text-master-yellow"
+                ></i
+                ><span>Computer Store</span>
+              </p>
+              <p class="flex gap-3">
+                <i
+                  data-lucide="phone"
+                  class="mt-1 h-4 w-4 shrink-0 text-master-yellow"
+                ></i
+                ><span>0926 836 1342</span>
+              </p>
+              <p class="flex gap-3">
+                <i
+                  data-lucide="mail"
+                  class="mt-1 h-4 w-4 shrink-0 text-master-yellow"
+                ></i
+                ><span class="break-all"
+                  >mastertechcomputertrading@gmail.com</span
+                >
+              </p>
+              <p class="flex gap-3">
+                <i
+                  data-lucide="map-pin"
+                  class="mt-1 h-4 w-4 shrink-0 text-master-yellow"
+                ></i
+                ><span
+                  >A. Luna - Don Apolinar Velez Street, Cagayan de Oro,
+                  Philippines</span
+                >
+              </p>
+            </div>
+          </div>
+          <div>
+            <h3 class="font-black text-master-yellow">Branches</h3>
+            <p class="mt-3 text-sm font-semibold leading-6 text-white/70">
+              CDO: Almirante Building, A. Luna - Don Apolinar Velez Street
+            </p>
+            <p class="mt-2 text-sm font-semibold leading-6 text-white/70">
+              Cebu: 82 Vibo, Escario Street, Brgy. Kamputhaw
+            </p>
+            <p class="mt-2 text-sm font-semibold leading-6 text-white/70">
+              Iligan: 132 Tibanga Highway, Iligan City
+            </p>
+          </div>
+        </div>
+        <p
+          class="mt-8 border-t border-white/10 pt-6 text-center text-xs font-bold text-white/60"
+        >
+          &copy; 2026 MasterTech Computer Trading - CDO. Promo details and stock
+          availability may change without prior notice.
+        </p>
+      </div>
+    </footer>
+
+    <div
+      class="product-modal"
+      aria-hidden="true"
+      role="dialog"
+      aria-label="Product details"
+      data-product-modal
+    >
+      <div class="product-modal-panel">
+        <img src="" alt="" data-product-modal-image />
+        <div class="product-modal-copy">
+          <p data-product-modal-tag>PC Deal</p>
+          <h2 data-product-modal-title>Desktop Package Promo</h2>
+          <p>
+            Ask MasterTech CDO about this product for current pricing, stock
+            availability, installment requirements, and reservation details.
+          </p>
+          <a
+            href="https://www.facebook.com/MTCT.CDO"
+            class="cta-button mt-7 inline-flex items-center justify-center gap-2 rounded-xl bg-master-blue px-5 py-3 text-sm font-black uppercase text-white"
+          >
+            Inquire on Facebook
+            <i data-lucide="message-circle" class="h-4 w-4"></i>
+          </a>
+        </div>
+        <button
+          class="absolute right-4 top-4 grid h-11 w-11 place-items-center rounded-full bg-master-yellow text-master-ink shadow-lg"
+          type="button"
+          aria-label="Close product details"
+          data-product-modal-close
+        >
+          <i data-lucide="x" class="h-5 w-5"></i>
+        </button>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
