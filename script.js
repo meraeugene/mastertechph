@@ -514,6 +514,7 @@
         const filters = Array.from(document.querySelectorAll("[data-product-filter]"));
         const pagination = document.querySelector("[data-products-pagination]");
         const productsSection = document.querySelector("[data-products-section]");
+        const productsTop = document.querySelector("[data-products-top]");
         const modal = document.querySelector("[data-product-modal]");
         const modalImage = modal?.querySelector("[data-product-modal-image]");
         const modalTag = modal?.querySelector("[data-product-modal-tag]");
@@ -553,6 +554,22 @@
           document.body.style.overflow = "";
         }
 
+        function scrollProductsToTop() {
+          const target = productsTop || productsSection || grid;
+          const getTop = () =>
+            Math.max(
+              0,
+              target.getBoundingClientRect().top + window.scrollY - 104,
+            );
+
+          requestAnimationFrame(() => {
+            window.scrollTo({ top: getTop(), behavior: "smooth" });
+            window.setTimeout(() => {
+              window.scrollTo({ top: getTop(), behavior: "smooth" });
+            }, 180);
+          });
+        }
+
         function renderPagination(totalPages) {
           pagination.innerHTML = "";
           const controls = [
@@ -576,12 +593,7 @@
             button.addEventListener("click", () => {
               currentPage = control.page;
               renderProducts();
-              requestAnimationFrame(() => {
-                (productsSection || grid).scrollIntoView({
-                  behavior: "smooth",
-                  block: "start",
-                });
-              });
+              scrollProductsToTop();
             });
             pagination.appendChild(button);
           });

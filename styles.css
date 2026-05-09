@@ -1,6 +1,22 @@
 ﻿html {
   scroll-behavior: smooth;
   scroll-padding-top: 92px;
+  scrollbar-color: #006dff #d8eeff;
+  scrollbar-width: thin;
+}
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background: #d8eeff;
+}
+::-webkit-scrollbar-thumb {
+  border: 3px solid #d8eeff;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #ffd23f, #006dff);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ffe16d, #004ec2);
 }
 section[id] {
   scroll-margin-top: 92px;
@@ -566,6 +582,11 @@ html:not(.aos-ready) [data-aos] {
 }
 .products-shell {
   background: linear-gradient(180deg, #edf3fb, #f8fbff);
+}
+.products-scroll-anchor {
+  display: block;
+  height: 0;
+  scroll-margin-top: 104px;
 }
 .products-toolbar {
   margin-inline: auto;
